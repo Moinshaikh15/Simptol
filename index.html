@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="/assets/hamburger-menu.png" alt="" id="ham-menu">
+    <header id="header">
+        <img src="/assets/close.png" alt="" id="close">
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Restaurant</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <div class="contacts">
+                <img src="/assets/phone.png" alt="phone icon">
+                <img src="/assets/cart.png" alt="cart icon">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <h1>LOREM IPSUM</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel et error neque cum deserunt ullam
+                    explicabo? Corporis laboriosam quia nisi dolorum ipsam placeat omnis, explicabo corrupti sit non.
+                    Dolor, autem?</p>
+            </div>
+
+        </section>
+
+        <section id="order">
+            <h1>Order Now</h1>
+            <div class="Menu-list">
+                <div class="menu-card">
+                    <img src="/assets/burger.jpg" alt="burger image">
+                    <h4 class="name">BURGER</h4>
+                    <p>Lorem, ipsum has been the industry's standard dummy text </p>
+                </div>
+
+                <div class="menu-card">
+                    <img src="/assets/pizza.jpg" alt="pizza image">
+                    <h4 class="name">PIZZA</h4>
+                    <p>Lorem, ipsum has been the industry's standard dummy text </p>
+                </div>
+                <div class="menu-card">
+                    <img src="/assets/pasta.jpg" alt="pasta image">
+                    <h4 class="name">pasta</h4>
+                    <p>Lorem, ipsum has been the industry's standard dummy text </p>
+
+                </div>
+            </div>
+
+            <button>Order</button>
+        </section>
+
+    </main>
+
+    <script>
+        document.getElementById("ham-menu").addEventListener('click', () => {
+            document.getElementById('header').style.display = "flex"
+            document.getElementById("ham-menu").style.display="none"
+        })
+
+        document.getElementById('close').addEventListener('click', () => {
+            document.getElementById('header').style.display = "none"
+            document.getElementById("ham-menu").style.display="block"
+        })
+
+        let navList = document.getElementById('nav-list')
+
+        Array.from(navList.children).forEach(navItem => {
+            navItem.addEventListener('click', () => {
+                document.getElementById('header').style.display = "none";
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
