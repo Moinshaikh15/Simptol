@@ -28,6 +28,13 @@ header {
   padding: 1.6rem;
   position: relative;
 }
+.show-header {
+  display: flex;
+}
+
+.show-ham-icon {
+  display: block;
+}
 
 nav {
   width: 100%;
@@ -158,13 +165,20 @@ main {
   nav li {
     margin: 0 0.8rem;
   }
+  #ham-menu {
+    display: none;
+    cursor: pointer;
+  }
 }
 /* Tablets */
 @media screen and (max-width: 768px) {
   html {
     font-size: 50%;
   }
-
+  #ham-menu {
+    display: none;
+    cursor: pointer;
+  }
   nav li {
     margin: 0 1rem;
   }
@@ -266,7 +280,6 @@ main {
   .menu-card .name {
     font-size: 1.6rem;
   }
-
 
   #order button {
     padding: 0.8rem 2.6rem;

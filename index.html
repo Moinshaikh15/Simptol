@@ -68,21 +68,21 @@
 
     <script>
         document.getElementById("ham-menu").addEventListener('click', () => {
-            document.getElementById('header').style.display = "flex"
-            document.getElementById("ham-menu").style.display="none"
+            document.getElementById('header').classList.add("show-header")
+            document.getElementById("ham-menu").classList.remove("show-ham-icon")
         })
 
         document.getElementById('close').addEventListener('click', () => {
-            document.getElementById('header').style.display = "none"
-            document.getElementById("ham-menu").style.display="block"
+            document.getElementById('header').classList.remove("show-header")
+            document.getElementById("ham-menu").classList.add("show-ham-icon")
         })
 
         let navList = document.getElementById('nav-list')
 
         Array.from(navList.children).forEach(navItem => {
             navItem.addEventListener('click', () => {
-                document.getElementById('header').style.display = "none";
-                document.getElementById("ham-menu").style.display="block"
+                document.getElementById('header').classList.remove("show-header")
+                document.getElementById("ham-menu").classList.add("show-ham-icon")
             });
         });
 
